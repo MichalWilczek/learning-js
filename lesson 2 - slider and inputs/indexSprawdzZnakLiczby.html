@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function sprawdz() {
+			// Pobierz wartość z pola edycyjnego.
+			var liczba = document.getElementById("pole").value;
+			
+			// Podejmij decyzję, jaka to liczba i wyświetl komentarz na ekranie.
+			if (liczba > 0) {
+				document.getElementById("wynik").innerHTML="dodatnia";
+			} else if (liczba < 0) {
+				document.getElementById("wynik").innerHTML="ujemna";
+			} else if (liczba == "") {
+				document.getElementById("wynik").innerHTML="okno jest puste!";
+			} else if (liczba == 0) {
+				document.getElementById("wynik").innerHTML="zero";
+			} else {
+				document.getElementById("wynik").innerHTML="to nie jest liczba!";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<input type="text" id="pole"/>
+	<input type="submit" value="Sprawdź" onclick="sprawdz()"/>
+	
+	<div id="wynik"></div>
+</body>
+
+</html>
